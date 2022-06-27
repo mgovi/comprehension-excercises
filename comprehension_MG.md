@@ -20,15 +20,23 @@ After you have solved it, write a second version of your script using list compr
 
 -------------------------------------------------------------------------------------------------
 
+# to print the numbers from 1 to 100
 for x in range(1,101):
-    if (x % 3 == 0) & (x % 5 == 0):
+# numbers which are multiples of both three and five print "FizzBuzz"
+    if (x % 3 == 0) and (x % 5 == 0):
         print("FizzBuzz")
+# For multiples of three print "Fizz" instead of the number
     elif (x % 3 == 0):
         print('Fizz')
+# For Multiples of five print "Buzz"
     elif (x % 5 == 0):
         print('Buzz')
     else:
         print(x)
+
+# as a list comprehension
+number = [("fizzbuzz" if (x % 3 == 0) and (x % 5 == 0) else "buzz" if x % 5==0 else "fizz" if  x % 3 == 0 else x) for x in range(1,101)]
+print(number)
   
-}
+
 
